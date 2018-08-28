@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../service-order/service-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springcloudconfig/config-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springcloudconfig/config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-client-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-client-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-client1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-feign-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-ribbon-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../userclient_liuwei" charset="UTF-8" />
+  </component>
+</project>

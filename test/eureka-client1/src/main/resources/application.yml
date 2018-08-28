@@ -1,0 +1,45 @@
+---
+#对内服务
+count: 0.8
+eureka:
+  client:
+    service-url:
+        defaultZone: http://localhost:8761/eureka/
+spring:
+    application:
+        name: eureka-client
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/testjava?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false
+        username: root
+        password: 1234
+    jpa:
+        hibernate:
+          ddl-auto: update
+        show-sql: true
+    profiles: dev
+server:
+  port: 8768
+---
+#对外服务
+count: 1.0
+eureka:
+  client:
+    service-url:
+        defaultZone: http://localhost:8761/eureka/
+spring:
+    application:
+        name: eureka-client
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/testjava?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false
+        username: root
+        password: 1234
+    jpa:
+        hibernate:
+          ddl-auto: update
+        show-sql: true
+    profiles: prod
+server:
+  port: 8769
+---

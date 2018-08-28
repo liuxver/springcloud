@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>bootstrap-table</title>
+    <link rel="stylesheet" href="asserts/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="asserts/css/bootstrap-table.min.css"/>
+
+    <script type="text/javascript" src="asserts/js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript" src="asserts/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="asserts/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="asserts/js/bootstrap-table.js"></script>
+    <script type="text/javascript" src="asserts/js/bootstrap-table-zh-CN.js"></script>
+
+</head>
+<body>
+<div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title text-center">商品价格查询</h3>
+        </div>
+        <div class="panel-body">
+            <div id="toolbar" class="btn-group">
+                商品ID：<input id="id" type="text" name="id">
+                <button id="btn_add" type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>查询
+                </button>
+                价格：<input name="price" id="price">
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    //查询
+    $("#btn_add").click(function (){
+        if($("#id").val() ==null){
+            alert("请输入ID！");
+        }else {
+            $.ajax({
+                type: "get",
+                url: "http://localhost:8765/getgoodspro/" + $("#id").val(),
+                dataType: "text",
+                success: function (price) {
+                    alert(price);
+                    $("#price").attr('value',price);
+                },
+                error: function () {
+                    alert("错误!");
+                }
+            });
+        }
+    });
+
+</script>
+</body>
+</html>

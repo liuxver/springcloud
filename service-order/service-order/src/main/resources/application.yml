@@ -1,0 +1,12 @@
+server:
+  port: 8085
+  datasource:
+    username: litingyu
+    password: litingyu
+    url: jdbc:mysql://118.25.74.142:3306/book
+    driver-class-name: com.mysql.jdbc.Driver
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
